@@ -14,12 +14,12 @@ async function initRepo() {
       path.join(repoPath, "config.json"),
       // JSON.stringify({ bucket: process.env.AWS_BUCKET_NAME })
       JSON.stringify({ bucket: "git-bucket" })
-
     );
-ß
+
     console.log("Repository initialized successfully!");
   } catch (err) {
     console.error("Failed to initialize repository", err);
+    throw new Error("Failed to initialize repository");
   }
 }
 

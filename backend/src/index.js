@@ -21,7 +21,13 @@ yargs(hideBin(process.argv))
         type: "string",
       });
     },
-    addFiles
+    (argv) => {
+      if (Array.isArray(argv.file)) {
+        argv.file.forEach((file) => addFiles(file));
+      } else {
+        addFiles(argv.file);
+      }
+    }
   )
   .command(
     "commit <message>",
