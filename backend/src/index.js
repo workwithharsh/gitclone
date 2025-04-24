@@ -2,12 +2,12 @@ import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
 // Import controllers
-import { addFiles } from "./src/controllers/add.controller.js";
-import { commitChanges } from "./src/controllers/commit.controller.js";
-import { initRepo } from "./src/controllers/init.controller.js";
-import { pullChanges } from "./src/controllers/pull.controller.js";
-import { pushChanges } from "./src/controllers/push.controller.js";
-import { revertChanges } from "./src/controllers/revert.controller.js";
+import { addFiles } from "./controllers/add.controller.js";
+import { commitChanges } from "./controllers/commit.controller.js";
+import { initRepo } from "./controllers/init.controller.js";
+import { pullChanges } from "./controllers/pull.controller.js";
+import { pushChanges } from "./controllers/push.controller.js";
+import { revertChanges } from "./controllers/revert.controller.js";
 
 // Initialize yargs & Define commands
 yargs(hideBin(process.argv))
